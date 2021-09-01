@@ -7,9 +7,10 @@ public class AsteroidSpawner : MonoBehaviour
 {
 
     public GameObject[] asteroidPrefab;
-    public Vector3 spawnPoint;
     public int timeTilNextSpawn = 2;
     float timer = 0;
+    public float spawnRangeX = 20;
+    public float spawnPosZ = 20;
  
     void Start()
     {
@@ -24,6 +25,8 @@ public class AsteroidSpawner : MonoBehaviour
  
     void Spawn()
     {
+        Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+        
         if (timer >= timeTilNextSpawn)
         {
             int asteroidIndex = Random.Range(0, this.asteroidPrefab.Length);
