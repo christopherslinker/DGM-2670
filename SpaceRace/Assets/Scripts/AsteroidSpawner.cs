@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 public class AsteroidSpawner : MonoBehaviour
 {
 
-    public GameObject asteroidPrefab;
+    public GameObject[] asteroidPrefab;
     public Vector3 spawnPoint;
-    public int timeTilNextSpawn = 3;
+    public int timeTilNextSpawn = 2;
     float timer = 0;
  
     void Start()
@@ -25,7 +26,9 @@ public class AsteroidSpawner : MonoBehaviour
     {
         if (timer >= timeTilNextSpawn)
         {
-            Instantiate(asteroidPrefab, spawnPoint, Quaternion.identity);
+            int asteroidIndex = Random.Range(0, this.asteroidPrefab.Length);
+            Instantiate(asteroidPrefab[asteroidIndex], new Vector3(0, 0, 20),
+            asteroidPrefab[asteroidIndex].transform.rotation);
             timer = 0;
         }
     }
