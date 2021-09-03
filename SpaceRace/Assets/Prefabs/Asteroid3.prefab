@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1518374763463526750}
   - component: {fileID: 3970716656923355045}
   - component: {fileID: -510757899968236812}
+  - component: {fileID: 5190607185580684344}
   m_Layer: 0
   m_Name: Asteroid3
   m_TagString: Untagged
@@ -111,3 +112,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+--- !u!114 &5190607185580684344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7629093294340035567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac9b002fda7894f4ab70fa10cc358e74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -7,10 +7,11 @@ public class AsteroidSpawner : MonoBehaviour
 {
 
     public GameObject[] asteroidPrefab;
+    private float spawnRangeX = 20;
+    private float spawnPosZ = 20;
     public int timeTilNextSpawn = 2;
     float timer = 0;
-    public float spawnRangeX = 20;
-    public float spawnPosZ = 20;
+
  
     void Start()
     {
@@ -22,7 +23,7 @@ public class AsteroidSpawner : MonoBehaviour
         timer += Time.deltaTime;
         Spawn();
     }
- 
+    
     void Spawn()
     {
         Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
