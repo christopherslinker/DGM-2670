@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -35,5 +36,13 @@ public class PlayerController : MonoBehaviour
                 
                 verticalInput = Input.GetAxis("Vertical");
                 transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Asteroid"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
