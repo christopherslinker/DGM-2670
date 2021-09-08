@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.37312314, g: 0.3807428, b: 0.358727, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 587026691}
   - component: {fileID: 587026690}
+  - component: {fileID: 587026692}
   m_Layer: 0
   m_Name: AsteroidSpawner
   m_TagString: Untagged
@@ -147,7 +148,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587026689}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d715e9fe667cc4590b8e5f6a6d40d82a, type: 3}
   m_Name: 
@@ -171,6 +172,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &587026692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587026689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6868c8a1ff33434cabbce96282d5836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroidPrefab:
+  - {fileID: 6250771349239664288, guid: 9cee8f6f807c1461bbe0bcc966a7033b, type: 3}
+  - {fileID: 3906749232593980632, guid: 151bb3501b3204eb093ee6cfb822083c, type: 3}
+  - {fileID: 7629093294340035567, guid: 3b683dde4ab4b4e1ab4322094e6bdb2d, type: 3}
 --- !u!1 &1052857097
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,10 +641,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1888032338}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: -0, y: -0.7166386, z: -0, w: 0.69744474}
+  m_LocalPosition: {x: 1683, y: 3, z: 46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -91.555, z: 0}
