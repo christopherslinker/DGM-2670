@@ -24,7 +24,7 @@ public class SpawnerAsteroid : MonoBehaviour
     {
     }
 
-    void SpawnRandomAnimal()
+    void SpawnRandomAsteroid ()
     {
         Vector3 SpawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, SpawnPosZ);
                 
