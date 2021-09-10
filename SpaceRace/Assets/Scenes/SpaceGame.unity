@@ -132,7 +132,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 587026691}
-  - component: {fileID: 587026690}
   - component: {fileID: 587026692}
   m_Layer: 0
   m_Name: AsteroidSpawner
@@ -141,23 +140,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &587026690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 587026689}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d715e9fe667cc4590b8e5f6a6d40d82a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  asteroidPrefab:
-  - {fileID: 6250771349239664288, guid: 9cee8f6f807c1461bbe0bcc966a7033b, type: 3}
-  - {fileID: 3906749232593980632, guid: 151bb3501b3204eb093ee6cfb822083c, type: 3}
-  - {fileID: 7629093294340035567, guid: 3b683dde4ab4b4e1ab4322094e6bdb2d, type: 3}
-  timeTilNextSpawn: 2
 --- !u!4 &587026691
 Transform:
   m_ObjectHideFlags: 0
@@ -185,9 +167,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroidPrefab:
-  - {fileID: 6250771349239664288, guid: 9cee8f6f807c1461bbe0bcc966a7033b, type: 3}
-  - {fileID: 3906749232593980632, guid: 151bb3501b3204eb093ee6cfb822083c, type: 3}
-  - {fileID: 7629093294340035567, guid: 3b683dde4ab4b4e1ab4322094e6bdb2d, type: 3}
+  - {fileID: 919132149155446097, guid: 3617d9b74c5d14a028b35a935621d1c3, type: 3}
+  - {fileID: 919132149155446097, guid: 4fe6a6f42d5904d929d331815b00fbaa, type: 3}
+  - {fileID: 919132149155446097, guid: 210202fe58f86460a8b20fa8efce0144, type: 3}
 --- !u!1 &1052857097
 GameObject:
   m_ObjectHideFlags: 0
