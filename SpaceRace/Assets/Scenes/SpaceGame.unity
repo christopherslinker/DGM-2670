@@ -380,6 +380,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpaceShipFBX
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 04cb2796e46f047c2b5bc2df744bceef, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04cb2796e46f047c2b5bc2df744bceef, type: 3}
 --- !u!1 &1574680194 stripped
@@ -436,8 +440,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.13948749, y: 0.051363792, z: 0.12280976}
-  m_Center: {x: 0.012556019, y: 0.034386188, z: 0.00068829657}
+  m_Size: {x: 0.13948749, y: 0.05581481, z: 0.12280976}
+  m_Center: {x: 0.012556023, y: 0.02236859, z: 0.00068829657}
 --- !u!1 &1878394221
 GameObject:
   m_ObjectHideFlags: 0
