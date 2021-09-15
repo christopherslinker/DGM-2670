@@ -12,10 +12,12 @@ public class PlayerController : MonoBehaviour
     private float speed = 5.0f;
 
     private float xRange = 6;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+
+
     }
 
     // Update is called once per frame

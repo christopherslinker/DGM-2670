@@ -6,7 +6,7 @@ public class SpawnerAsteroid : MonoBehaviour
 {
     public GameObject[] asteroidPrefab;
 
-    private float spawnRangeX = 10;
+    private float spawnRangeX = 6;
 
     private float SpawnPosZ = 20;
 
@@ -16,7 +16,7 @@ public class SpawnerAsteroid : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnRandomAsteroid", startDelay, startInterval);
+        InvokeRepeating(nameof(SpawnRandomAsteroid), startDelay, startInterval);
     }
 
     // Update is called once per frame
@@ -24,7 +24,7 @@ public class SpawnerAsteroid : MonoBehaviour
     {
     }
 
-    void SpawnRandomAsteroid ()
+    private void SpawnRandomAsteroid ()
     {
         Vector3 SpawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, SpawnPosZ);
                 
