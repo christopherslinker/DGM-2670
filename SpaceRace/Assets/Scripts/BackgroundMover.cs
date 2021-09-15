@@ -9,18 +9,18 @@ public class BackgroundMover : MonoBehaviour
 
     private Vector3 startPos;
 
-    private float repeatWidth;
+    private float repeatLength;
     // Start is called before the first frame update
     void Start()
     {
         startPos = transform.position;
-        repeatWidth = GetComponent<BoxCollider>().size.z / 2;
+        repeatLength = GetComponent<BoxCollider>().size.z;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.z < startPos.z - repeatWidth)
+        if (transform.position.z < startPos.z - repeatLength)
         {
             transform.position = startPos;
         }

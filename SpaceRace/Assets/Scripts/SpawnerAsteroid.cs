@@ -26,11 +26,11 @@ public class SpawnerAsteroid : MonoBehaviour
 
     private void SpawnRandomAsteroid ()
     {
-        Vector3 SpawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, SpawnPosZ);
+        var spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, SpawnPosZ);
                 
         int asteroidIndex = Random.Range(0, asteroidPrefab.Length);
                 
-        Instantiate(asteroidPrefab [asteroidIndex], SpawnPos,
+        Instantiate(asteroidPrefab [asteroidIndex], spawnPos,
             asteroidPrefab [asteroidIndex].transform.rotation); 
     }
 }
