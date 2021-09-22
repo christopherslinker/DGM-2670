@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class CollectableSpawner : MonoBehaviour
 {
-    public GameObject Collectable;
+    public GameObject collectable;
     
     private float ySpawn = 0.75f;
     
-    public float xSpawnRange;
+    public float xSpawnRange = 5.0f;
 
-    public float zCollectableRange;
+    public float zSpawnRange = 5.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,12 +23,12 @@ public class CollectableSpawner : MonoBehaviour
         
     }
 
-    void SpawnRandomCollectable()
+    void SpawnCollectable()
     {
     float randomX = Random.Range(-xSpawnRange, xSpawnRange);
-    float randomZ = Random.Range(-zCollectableRange, zCollectableRange);
+    float randomZ = Random.Range(-zSpawnRange, zSpawnRange);
     
-    Vector3 spawnPos = new Vector3(randomX, ySpawn, randomZ);
-    Instantiate(Collectable, spawnPos, Collectable.gameObject.transform.rotation);
+    var spawnPos = new Vector3(randomX, ySpawn, randomZ);
+    Instantiate(collectable, spawnPos, collectable.gameObject.transform.rotation);
     }
 }
