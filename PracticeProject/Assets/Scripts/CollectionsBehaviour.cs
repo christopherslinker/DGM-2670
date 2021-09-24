@@ -7,16 +7,16 @@ public class CollectionsBehaviour : MonoBehaviour
 {
     private GameObject art;
     public SpriteRenderer artSpriteRenderer;
-    public collectableSO collectedObj;
+    public CollectableSO collectedObj;
     public CollectionSO collection;
     
 
     private void Awake()
     {
-        ConfigCollectable();
+        ConfigCollectabe();
     }
 
-    public void SwapCollectable()
+    public void SwapCollectable(CollectableSO collectable)
     {
         collectedObj = collectable;
         ConfigCollectabe();
@@ -25,7 +25,7 @@ public class CollectionsBehaviour : MonoBehaviour
     private void ConfigCollectabe()
     {
         art = GetComponentInChildren<Transform>().gameObject;
-        artSpriteRenderer = GetComponentsInChildren<SpriteRenderer>();
+        artSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
         if (artSpriteRenderer != null)
         {
             artSpriteRenderer.sprite = collectedObj.art2D;
