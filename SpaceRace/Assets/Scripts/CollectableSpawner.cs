@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class CollectableSpawner : MonoBehaviour
 {
@@ -8,19 +10,17 @@ public class CollectableSpawner : MonoBehaviour
     
     private float ySpawn = 0.75f;
     
-    public float xSpawnRange = 5.0f;
+    private float xSpawnRange = 5.0f;
 
-    public float zSpawnRange = 5.0f;
-    // Start is called before the first frame update
+    private float zSpawnRange = 5.0f;
+
+    private float startDelay = 3.0f;
+
+    private float collectableSpawnTime = 3.0f;
+
     void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    {        
+        InvokeRepeating("SpawnCollectable", startDelay, collectableSpawnTime);
     }
 
     void SpawnCollectable()
