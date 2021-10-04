@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -12,15 +13,15 @@ public class PlayerController : MonoBehaviour
     private float speed = 5.0f;
 
     private float xRange = 4.5f;
+
+    //private GameOverBehaviour gameOverBehaviour;
     
-    // Start is called before the first frame update
+
     void Start()
     {
-
-
+        //gameOverBehaviour = GameObject.Find("GameOverBehaviour").GetComponent<GameOverBehaviour>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
                 if (transform.position.x < -xRange)
