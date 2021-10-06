@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BackgroundMover : MonoBehaviour
 {
-    private float speed = 20;
+    private float speed = 1f;
     
     void Update()
     {

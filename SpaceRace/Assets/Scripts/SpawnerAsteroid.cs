@@ -18,12 +18,7 @@ public class SpawnerAsteroid : MonoBehaviour
     {
         InvokeRepeating(nameof(SpawnRandomAsteroid), startDelay, startInterval);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
+    
     private void SpawnRandomAsteroid ()
     {
         var spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, SpawnPosZ);
