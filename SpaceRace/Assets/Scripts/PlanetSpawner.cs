@@ -22,8 +22,8 @@ public class PlanetSpawner : MonoBehaviour
         var spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnRangeZ);
         int planetIndex = Random.Range(0, planetSprite.Length);
         
-        Instantiate(planetSprite [planetIndex], spawnPos,
-            planetSprite [planetIndex].transform.rotation); 
+       // Instantiate(planetSprite [planetIndex], spawnPos,
+            //planetSprite [planetIndex].transform.rotation); 
     }
 
 }
