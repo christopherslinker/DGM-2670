@@ -12,7 +12,9 @@ public class CollectableSpawner : MonoBehaviour
     
     private float xSpawnRange = 5.0f;
 
-    private float zSpawnRange = 5.0f;
+    private float zSpawnRangeDown = 15.0f;
+
+    private float zSpawnRangeUp = 3.0f;
 
     private float startDelay = 3.0f;
 
@@ -26,7 +28,7 @@ public class CollectableSpawner : MonoBehaviour
     void SpawnCollectable()
     {
     float randomX = Random.Range(-xSpawnRange, xSpawnRange);
-    float randomZ = Random.Range(-zSpawnRange, zSpawnRange);
+    float randomZ = Random.Range(-zSpawnRangeDown, zSpawnRangeUp);
     
     var spawnPos = new Vector3(randomX, ySpawn, randomZ);
     Instantiate(collectable, spawnPos, collectable.gameObject.transform.rotation);
