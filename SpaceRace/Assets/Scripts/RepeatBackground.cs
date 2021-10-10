@@ -14,7 +14,7 @@ public class RepeatBackground : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.x  < startPos.z - 200)
+        if (transform.position.z  < startPos.z - 12)
         {
             transform.position = startPos;
         }

@@ -12,7 +12,9 @@ public class PlayerController : MonoBehaviour
 
     private float speed = 5.0f;
 
-    private float xRange = 4.5f;
+    private float xRange = 4f;
+
+    private float zRange = 8.5f;
 
     //private GameOverBehaviour gameOverBehaviour;
     
@@ -32,6 +34,15 @@ public class PlayerController : MonoBehaviour
                 if (transform.position.x > xRange)
                 {
                     transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
+                }
+                if (transform.position.z < -zRange)
+                {
+                    transform.position = new Vector3(transform.position.x, transform.position.y, -zRange );
+                }
+        
+                if (transform.position.z > zRange)
+                {
+                    transform.position = new Vector3(transform.position.x, transform.position.y, zRange);
                 }
                 
                 horizontalInput = Input.GetAxis("Horizontal");

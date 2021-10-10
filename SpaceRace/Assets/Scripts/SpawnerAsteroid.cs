@@ -8,7 +8,7 @@ public class SpawnerAsteroid : MonoBehaviour
 
     private float spawnRangeX = 6;
 
-    private float SpawnPosZ = 7;
+    private float SpawnPosZ = 12.5f;
 
     private float startDelay = 2;
 
