@@ -47,16 +47,11 @@ public class PlayerController : MonoBehaviour
                     transform.position = new Vector3(transform.position.x, transform.position.y, zRange);
                 }
                 
-                /*horizontalInput = Input.GetAxis("Horizontal");
+                horizontalInput = Input.GetAxis("Horizontal");
                 transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
                 
                 verticalInput = Input.GetAxis("Vertical");
-                transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);*/
+                transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
     }
-
-    private void OnMouseDown()
-    {
-        transform.Translate(Vector3.right * Time.deltaTime * speed);
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
-    }
+    
 }
