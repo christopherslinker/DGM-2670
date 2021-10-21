@@ -17,14 +17,7 @@ public class PlayerController : MonoBehaviour
     private float xRange = 4f;
 
     private float zRange = 8.5f;
-
-    //private GameOverBehaviour gameOverBehaviour;
     
-
-    void Start()
-    {
-        //gameOverBehaviour = GameObject.Find("GameOverBehaviour").GetComponent<GameOverBehaviour>();
-    }
     
     void Update()
     {
