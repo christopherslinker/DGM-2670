@@ -18,17 +18,26 @@ public class CollectableSpawner : MonoBehaviour
 
     private float collectableSpawnTime = 3.0f;
 
+    public GameOverBehaviour gameOverBehaviour;
+
     void Start()
     {        
         InvokeRepeating("SpawnCollectable", startDelay, collectableSpawnTime);
+        gameOverBehaviour = GameObject.Find("GameOverBehaviour").GetComponent<GameOverBehaviour>();
     }
 
     void SpawnCollectable()
     {
-    float randomX = Random.Range(-xSpawnRange, xSpawnRange);
-    float randomZ = Random.Range(-zSpawnRange, zSpawnRange);
+        if (!gameOverBehaviour.gameIsOver)
+        {
+            float randomX = Random.Range(-xSpawnRange, xSpawnRange);
+            float randomZ = Random.Range(-zSpawnRange, zSpawnRange);
     
-    var spawnPos = new Vector3(randomX, ySpawn, randomZ);
-    Instantiate(collectable, spawnPos, collectable.gameObject.transform.rotation);
+            var spawnPos = new Vector3(randomX, ySpawn, randomZ);
+            Instantiate(collectable, spawnPos, collectable.gameObject.transform.rotation);
+        }
+
     }
+    
+    
 }
