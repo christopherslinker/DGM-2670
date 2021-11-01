@@ -12,8 +12,10 @@ public class SpawnerAsteroid : MonoBehaviour
 
     private float startDelay = 2;
 
-    private float startInterval = 3.0f;
-    // Start is called before the first frame update
+    public float startInterval = 3.0f;
+
+    public float increaseSpeed = .5f;
+
     void Start()
     {
         InvokeRepeating(nameof(SpawnRandomAsteroid), startDelay, startInterval);
@@ -26,6 +28,11 @@ public class SpawnerAsteroid : MonoBehaviour
         int asteroidIndex = Random.Range(0, asteroidPrefab.Length);
                 
         Instantiate(asteroidPrefab [asteroidIndex], spawnPos,
-            asteroidPrefab [asteroidIndex].transform.rotation); 
+            asteroidPrefab [asteroidIndex].transform.rotation);
+
+        if (Time.deltaTime == 5)
+        {
+            startInterval = startInterval - increaseSpeed;
+        }
     }
 }
