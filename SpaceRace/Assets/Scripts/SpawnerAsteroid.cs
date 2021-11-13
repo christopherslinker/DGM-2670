@@ -6,7 +6,7 @@ public class SpawnerAsteroid : MonoBehaviour
 {
     public GameObject[] asteroidPrefab;
 
-    private float spawnRangeX = 6;
+    private float spawnRangeX = 4;
 
     private float SpawnPosZ = 12.5f;
 
