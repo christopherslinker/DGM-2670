@@ -5,11 +5,16 @@ using UnityEngine;
 
 public class CoinSound : MonoBehaviour
 {
-    public AudioClip coinCollect;
-    public GameObject coin;
+    public AudioSource coinSound;
+    
+    
 
-    private void OnDestroy()
+ void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Collectable"))
+        {
+            coinSound.Play();
+        }
     }
+
 }
