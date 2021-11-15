@@ -6,24 +6,31 @@ using Random = UnityEngine.Random;
 
 public class PlanetSpawner : MonoBehaviour
 {
-    public Sprite[] planetSprite;
-    private float spawnRangeX = 0f;
-    private float spawnRangeZ = 0f;
-    private float startDelay = 5f;
-    private float spawnInterval = 10f;
+    public GameObject[] planetPrefab;
 
-    private void Start()
+    private float spawnRangeX = 4;
+
+    private float SpawnPosZ = 12.5f;
+
+    private float startDelay = 10;
+
+    public float startInterval = 40.0f;
+
+
+    void Start()
     {
-        InvokeRepeating(nameof(SpawnPlanets), startDelay, spawnInterval);
+        InvokeRepeating(nameof(SpawnRandomAsteroid), startDelay, startInterval);
     }
-
-    private void SpawnPlanets()
+    
+    private void SpawnRandomAsteroid ()
     {
-        var spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnRangeZ);
-        int planetIndex = Random.Range(0, planetSprite.Length);
+        var spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, SpawnPosZ);
+                
+        int planetIndex = Random.Range(0, planetPrefab.Length);
+                
+        Instantiate(planetPrefab [planetIndex], spawnPos,
+            planetPrefab [planetIndex].transform.rotation);
         
-       // Instantiate(planetSprite [planetIndex], spawnPos,
-            //planetSprite [planetIndex].transform.rotation); 
     }
 
 }
